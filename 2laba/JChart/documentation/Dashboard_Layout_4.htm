@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='25492' />
+<title>Dashboard Layout</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JChart">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Charting for Java Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Dashboard Layout</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p>The <a id='81335' href='T_com_mindfusion_charting_swing_Dashboard.htm' title=''>Dashboard</a> class is the class you&#160;use when you want to create a dashboard. The hierarchy of dashboard's components starts from its <a id='81359' href='M_com_mindfusion_charting_swing_Dashboard_getRootPanel_0.htm' title=''>RootPanel</a>. By default, the <span class='repeatingLink'>RootPanel</span> contains an <a id='79528' href='T_com_mindfusion_charting_components_ImageComponent.htm' title=''>ImageComponent</a> for drawing a&#160;<a id='81354' href='M_com_mindfusion_charting_swing_Dashboard_getBackgroundImage_0.htm' title=''>BackgroundImage</a>, and the <a id='81358' href='M_com_mindfusion_charting_swing_Dashboard_getLayoutPanel_0.htm' title=''>LayoutPanel</a> where you&#160; add objects that participate in layout and&#160;are placed relatively to each other:</p><p><table class='syntax' codeLanguage='Java' cellspacing='0'><tr><th><span style='float: left;'>Java</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>TextComponent title = new TextComponent();<br/>title.setHorizontalAlignment(LayoutAlignment.Center);<br/>title.setText("Popular Web Apps");<br/>title.setMargin(new Margins(10));<br/>........<br/>dashboard.getLayoutPanel().getChildren().add(title);</p></td></tr></table></p><p>The <span class='repeatingLink'>Dashboard</span> class can be paired with the powerful <a id='81403' href='T_com_mindfusion_charting_swing_LayoutBuilder.htm' title=''>LayoutBuilder</a> class that creates a variety of predefined&#160;<a id='79505' href='T_com_mindfusion_charting_components_GridPanel.htm' title=''>GridPanel</a> and <a id='79577' href='T_com_mindfusion_charting_components_StackPanel.htm' title=''>StackPanel</a> instances some of&#160;which might contain <a id='79648' href='T_com_mindfusion_charting_AxisRenderer.htm' title=''>AxisRenderer</a> and <a id='80203' href='T_com_mindfusion_charting_Plot.htm' title=''>Plot</a> instances.</p><p><table class='syntax' codeLanguage='Java' cellspacing='0'><tr><th><span style='float: left;'>Java</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>Dashboard dashboard = new Dashboard();<br/>LayoutBuilder builder = new LayoutBuilder(dashboard);<br/>....................................<br/>GridPanel linePanel = builder.createAndAddPlotWithBottomAndLeftAxes<br/>&#160;&#160;&#160;(linePlot, linePlotXRenderer, linePlotYRenderer);</p></td></tr></table></p><p>The <span class='repeatingLink'>LayoutBuilder</span> takes care&#160;of the dynamic alignment of its <a id='79412' href='T_com_mindfusion_charting_components_Component.htm' title=''>Component</a>-s. Use the method of your choice to create a <span class='repeatingLink'>Plot</span> with axis at given&#160;positions - left, right, top and bottom.&#160;The <span class='repeatingLink'>LayoutBuilder</span> takes care of setting the&#160;various alignment and orientation properties to achieve and maintain the chosen layout.</p><p>The major part of a&#160;<span class='repeatingLink'>Dashboard</span>&#160;is taken by <a id='79549' href='T_com_mindfusion_charting_components_Panel.htm' title=''>Panel</a>-s that&#160;render and arrange&#160;graphical elements. You can choose among:</p><ul><li><a id='79571' href='T_com_mindfusion_charting_components_SimplePanel.htm' title=''>SimplePanel</a> that arranges its children on top of each other and can be useful for hosting overlapping components with transparent regions.</li><li><span class='repeatingLink'>StackPanel</span> that arranges its children in horizontal or vertical stacks.</li><li><span class='repeatingLink'>GridPanel</span> that arranges its children in a grid of rows and columns. The target cell of a component inside a <span class='repeatingLink'>GridPanel</span> is specified via its <a id='79515' href='T_com_mindfusion_charting_components_GridRow.htm' title=''>GridRow</a> and <a id='79494' href='T_com_mindfusion_charting_components_GridColumn.htm' title=''>GridColumn</a> properties.<br/></li></ul><p><table class='syntax' codeLanguage='Java' cellspacing='0'><tr><th><span style='float: left;'>Java</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>GridPanel pnlGrid = new GridPanel();<br/>pnlGrid.getColumns().add(new GridColumn());<br/>pnlGrid.getRows().add(new GridRow());<br/><br/>TextComponent barText = new TextComponent();<br/>barText.setGridRow(0);<br/>barText.setGridColumn(1);<br/>.......................<br/>pnlGrid.getChildren().add(barText);<br/>dashboard.getLayoutPanel().getChildren().add(pnlGrid);</p></td></tr></table></p><p>You can add your own components and panels to any of the pre-defined panels listed above.</p><p><a id='81251' href='T_com_mindfusion_charting_swing_Chart.htm' title=''>Chart</a> and its derived classes automatically add <a id='81273' href='M_com_mindfusion_charting_swing_Chart_getPlotPanel_0.htm' title=''>PlotPanel</a> to <span class='repeatingLink'>LayoutPanel</span> to host <a id='80205' href='C_com_mindfusion_charting_Plot_Plot_0.htm' title=''>Plot</a>, <span class='repeatingLink'>AxisRenderer</span> and <span class='repeatingLink'>ImageComponent</span> for <a id='81270' href='M_com_mindfusion_charting_swing_Chart_getPlotImage_0.htm' title=''>PlotImage</a>. </p><p>Here is a sample <span class='repeatingLink'>Dashboard</span> that illustrates a possible layout of various <span class='repeatingLink'>Component</span>-s, <span class='repeatingLink'>Panel</span>-s and Renderer-s:</p><p></p><p><img src='dashboard_layout.png' title='' hspace='0' vspace='20' align='' width='874' height='594'/></p>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2022 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

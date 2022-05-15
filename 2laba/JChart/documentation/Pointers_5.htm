@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='25499' />
+<title>Pointers</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JChart">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Charting for Java Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Pointers</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p>The pointers represent needles or similar type of indicators within the scale. They are used to visualize a current measurement within the scale. The most important member of the pointer object is its <a id='79082' href='M_com_mindfusion_charting_components_gauges_Pointer_getValue_0.htm' title=''>Value</a>. The pointer is automatically adjusted by its containing scale so that it points to the scale location, corresponding to its value.</p><p>The size of the pointer is defined by the <a id='79080' href='M_com_mindfusion_charting_components_gauges_Pointer_getPointerWidth_0.htm' title=''>PointerWidth</a> and <a id='79078' href='M_com_mindfusion_charting_components_gauges_Pointer_getPointerHeight_0.htm' title=''>PointerHeight</a> properties. These properties can express the size as relative or absolute value. The location of the pointer can be adjusted through the PointerOffset property and its alignment in a linear scale can be specified through the <a id='79072' href='M_com_mindfusion_charting_components_gauges_Pointer_getAlignment_0.htm' title=''>Alignment</a> property.</p><p>The pointer can be made interactive by setting the IsInteractive property to true. Clicking with the mouse within a scale causes all its interactive pointers to be adjusted to the value corresponding to the clicked point. A pointer can be made discrete by setting IsDiscrete to true. The value of a discrete pointer is always integer.</p><h2>Usage</h2><p>The sample code below illustrates how to define and add pointers to an existing scale:</p><p><table class='syntax' codeLanguage='Java' cellspacing='0'><tr><th><span style='float: left;'>Java</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>Pointer pointer = new Pointer();<br/>pointer.setIsInteractive(true);<br/>scale.addPointer(pointer);</p></td></tr></table></p><h2>Custom Appearance</h2><p>The appearance of the pointer can be customized by using the PrepaintPointer and PaintPointer events. The following example demonstrates an oval gauge with a compass needle type of pointer:</p><p><table class='syntax' codeLanguage='Java' cellspacing='0'><tr><th><span style='float: left;'>Java</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>OvalGauge&#160;gauge = new OvalGauge();<br/>&#160;&#160;<br/>OvalScale ovalScale = new OvalScale();<br/>ovalScale.setFill(new SolidBrush(new Color(0, 0, 0,0)));<br/>ovalScale.setStroke(new Pen(new Color(0, 0, 0, 0)));<br/>ovalScale.setMinValue(0);<br/>ovalScale.setMaxValue(360);<br/>ovalScale.getMajorTickSettings().setShowTicks(false);<br/>ovalScale.getMajorTickSettings().setShowLabels(false);<br/>ovalScale.getMajorTickSettings().setShowTicks(false);<br/>ovalScale.getMajorTickSettings().setShowLabels(false);</p><p>Pointer pointer = new Pointer();<br/>pointer.setPointerWidth(new Length(200, LengthType.Relative));<br/>pointer.setPointerHeight(new Length(20, LengthType.Relative));<br/>pointer.setPointerOffset(new Length(90, LengthType.Relative));<br/>pointer.setIsInteractive(true);<br/>pointer.setShape(PointerShape.Custom);<br/>ovalScale.getPointers().add(pointer);<br/>gauge.getScales().add(ovalScale);<br/><br/>ovalGauge.addBaseGaugeListener(new BaseGaugeAdapter()&#160;<br/>{<br/>&#160;&#160;&#160;<br/>&#160;&#160;&#160;@Override<br/>&#160;&#160;&#160;public void paintPointer(CustomPaintEvent e)<br/>&#160;&#160;&#160;{<br/>&#160;&#160;&#160; &#160;RenderContext context = e.getContext();<br/>&#160;&#160;&#160;&#160;&#160;VisualElement element = e.getElement();<br/>&#160;&#160;&#160;&#160;&#160;double width = element.getActualWidth();<br/>&#160;&#160;&#160;&#160;&#160;double height = element.getActualHeight();</p><p>&#160;&#160;&#160;&#160;&#160;PathFigure figure = new PathFigure("M0.5, 0 L1, 0.5 L0.5, 1 Z");<br/>&#160;&#160;&#160;&#160;&#160;figure.setFill(Utils.radialGradient(new Point2D.Double(0.5, 0.1),&#160;<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160;new float[]{0, 0.3F, 1.0F}, new Color[]{new Color(193,0,0,1), new Color(255,0,0,1), new Color(102,0,0,1)}));<br/>&#160;&#160;&#160;&#160;&#160;figure.setStroke(new Pen(new Color(32,32,32,1)));<br/>&#160;&#160;&#160;&#160;&#160;e.paintVisualElement(figure, new XDimension2D.Double(width, height));</p><p>&#160;&#160;&#160;&#160;&#160;PathFigure figure1 = new PathFigure("M0.5, 0 L0, 0.5 L0.5, 1 Z");<br/>&#160;&#160;&#160;&#160;&#160;figure1.setFill(Utils.radialGradient(new Point2D.Double(0.5, 0.1),&#160;<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160;new float[]{0F, 0.3F, 1F}, new Color[]{ new Color(193,193,193,1),&#160;<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160;new Color(204,204,204,1), new Color(102,102,102,1)}));<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br/>&#160;&#160;&#160;&#160;&#160;figure.setStroke( new Pen(new Color(32,32,32,1)));<br/>&#160;&#160;&#160;&#160;&#160;e.paintVisualElement(figure1, new XDimension2D.Double(width, height));</p><p>&#160;&#160;&#160;&#160;&#160;context.getGraphics().setColor(Color.GRAY);<br/>&#160;&#160;&#160;&#160;&#160;context.getGraphics().fillArc((int)width/2, (int)height/2, (int)width,<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160;(int)height, 0, 360);<br/>&#160;&#160;&#160;&#160;&#160;context.getGraphics().setColor(new Color(32,32,32,1));<br/>&#160;&#160;&#160;&#160;&#160;context.getGraphics().drawArc((int)width/2, (int)height/2, (int)width,<br/>&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;(int)height, 0, 360);<br/>&#160;&#160;}&#160;&#160;<br/>&#160;&#160;&#160;&#160;&#160;&#160;<br/>});</p></td></tr></table></p><p>The above gauge will look similar to the following image:</p><p><img src='GaugesPointers1.png' title='' hspace='0' vspace='0' align='' width='250' height='250'/></p><p></p>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2022 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
