@@ -1,0 +1,397 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='85722' />
+<title>com.mindfusion.drawing.HatchStyle Enumeration</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JChart">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Charting for Java Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style=''><span class='title'>HatchStyle Enumeration</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE; padding: 2pt 5pt 4pt 12pt;'><span><a id='' href='#SeeAlso'>See Also</a> </span></td>
+</tr>
+<tr>
+<td style='height: 19px; border-top: solid 1px #FFFFFF; border-bottom: solid 1px #C8CDDE; padding: 0pt 0pt 0pt 12pt;'>
+<span style='cursor: default' onkeypress='ExpandCollapseAll_CheckKey(toggleAllImage);' onclick='ExpandCollapseAll(toggleAllImage);'>
+<img src='collapsesmall.png' title='CollapseAll image' id='toggleAllImage' />
+<label style='display: none;' id='collapseAllLabel' for='toggleAllImage'>
+Collapse All
+</label>
+<label style='display: none;' id='expandAllLabel' for='toggleAllImage'>
+Expand All
+</label>
+&#160;</span>
+<span id='languageFilterToolTip' style='cursor: default;' onmouseover='languageFilterImage.src=dropDownHoverImage.src;' onmouseout='languageFilterImage.src=dropDownImage.src;' >
+<img src='arrow.png' title='DropDown image' id='languageFilterImage' />
+<label id='showAllLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: All
+</label>
+<label id='multipleLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: Multiple
+</label>
+<label id='noneLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: None
+</label>
+<label id='csLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: C#
+</label>
+<label id='vbLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: Visual Basic
+</label>
+<label id='javaLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: Java
+</label>
+<label id='jsLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: JavaScript
+</label>
+<label id='cppLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: C++
+</label>
+<label id='xamlLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: XAML
+</label>
+</span>
+</td>
+</tr>
+</table>
+<div id='languageSpan'>
+<input id='csCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='csCheckbox'>C#</label> <br />
+<input id='vbLangCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='vbLangCheckbox'>Visual Basic</label> <br />
+<input id='javaCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='javaCheckbox'>Java</label> <br />
+<input id='jsCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='jsCheckbox'>JavaScript</label> <br />
+<input id='cppCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='cppCheckbox'>C++</label> <br />
+<input id='xamlCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='xamlCheckbox'>XAML</label> <br />
+</div>
+</div>
+<div id='nstext'>
+<p>Represents hatch patterns available to <a id='85704' href='T_com_mindfusion_drawing_HatchBrush.htm' title=''>HatchBrush</a> objects.</p>
+<p><b>Namespace:</b> <a id='85335' href='N_com_mindfusion_drawing_0.htm' title=''>com.mindfusion.drawing</a><br/><b><span>File</span>:</b> com.mindfusion.drawing</p>
+<h2><span id='Syntax' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='SyntaxImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;Syntax</span></h2><div id='SyntaxSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<table class='syntax' codeLanguage='Java' cellspacing='0'><tr><th><span style='float: left;'>Java</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>public enum HatchStyle</p></td></tr></table></div>
+<h2><span id='Members' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='MembersImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;Members</span></h2><div id='MembersSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<table class='memberlist' cellspacing='0'>
+<col width='5%' />
+<col width='35%' />
+<col width='60%' />
+<tr>
+<th>&#160;</th>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>BackwardDiagonal</b></p></td>
+<td><p>A pattern of lines on a diagonal from upper right to lower left.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Cross</b></p></td>
+<td><p>Specifies horizontal and vertical lines that cross.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>DarkDownwardDiagonal</b></p></td>
+<td><p>Specifies diagonal lines that slant to the right from top points to bottom points, are spaced 50 percent closer together than, and are twice the width of ForwardDiagonal.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>DarkHorizontal</b></p></td>
+<td><p>Specifies horizontal lines that are spaced 50 percent closer together than Horizontal and are twice the width of Horizontal.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>DarkUpwardDiagonal</b></p></td>
+<td><p>Specifies diagonal lines that slant to the left from top points to bottom points, are spaced 50 percent closer together than BackwardDiagonal, and are twice its width.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>DarkVertical</b></p></td>
+<td><p>Specifies vertical lines that are spaced 50 percent closer together than Vertical and are twice its width.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>DashedDownwardDiagonal</b></p></td>
+<td><p>Specifies dashed diagonal lines, that slant to the right from top points to bottom points.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>DashedHorizontal</b></p></td>
+<td><p>Specifies dashed horizontal lines.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>DashedUpwardDiagonal</b></p></td>
+<td><p>Specifies dashed diagonal lines, that slant to the left from top points to bottom points.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>DashedVertical</b></p></td>
+<td><p>Specifies dashed vertical lines.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>DiagonalBrick</b></p></td>
+<td><p>Specifies a hatch that has the appearance of layered bricks that slant to the left from top points to bottom points.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>DiagonalCross</b></p></td>
+<td><p>A pattern of crisscross diagonal lines.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Divot</b></p></td>
+<td><p>Specifies a hatch that has the appearance of divots.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>DottedDiamond</b></p></td>
+<td><p>Specifies forward diagonal and backward diagonal lines, each of which is composed of dots, that cross.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>DottedGrid</b></p></td>
+<td><p>Specifies horizontal and vertical lines, each of which is composed of dots, that cross.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>ForwardDiagonal</b></p></td>
+<td><p>A pattern of lines on a diagonal from upper left to lower right.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Horizontal</b></p></td>
+<td><p>A pattern of horizontal lines.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>HorizontalBrick</b></p></td>
+<td><p>Specifies a hatch that has the appearance of horizontally layered bricks.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>LargeCheckerBoard</b></p></td>
+<td><p>Specifies a hatch that has the appearance of a checkerboard with squares that are twice the size of SmallCheckerBoard.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>LargeConfetti</b></p></td>
+<td><p>Specifies a hatch that has the appearance of confetti, and is composed of larger pieces than SmallConfetti.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>LargeGrid</b></p></td>
+<td><p>Specifies the hatch style Cross.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>LightDownwardDiagonal</b></p></td>
+<td><p>Specifies diagonal lines that slant to the right from top points to bottom points and are spaced 50 percent closer together than ForwardDiagonal, but are not antialiased.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>LightHorizontal</b></p></td>
+<td><p>Specifies horizontal lines that are spaced 50 percent closer together than Horizontal.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>LightUpwardDiagonal</b></p></td>
+<td><p>Specifies diagonal lines that slant to the left from top points to bottom points and are spaced 50 percent closer together than BackwardDiagonal.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>LightVertical</b></p></td>
+<td><p>Specifies vertical lines that are spaced 50 percent closer together than Vertical.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Max</b></p></td>
+<td><p>Specifies hatch style SolidDiamond.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Min</b></p></td>
+<td><p>Specifies hatch style Horizontal.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>NarrowHorizontal</b></p></td>
+<td><p>Specifies horizontal lines that are spaced 75 percent closer together than hatch style Horizontal.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>NarrowVertical</b></p></td>
+<td><p>Specifies vertical lines that are spaced 75 percent closer together than hatch style Vertical.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>OutlinedDiamond</b></p></td>
+<td><p>Specifies forward diagonal and backward diagonal lines that cross.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Percent05</b></p></td>
+<td><p>Specifies a 5-percent hatch. The ratio of foreground color to background color is 5:100.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Percent10</b></p></td>
+<td><p>Specifies a 10-percent hatch. The ratio of foreground color to background color is 10:100.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Percent20</b></p></td>
+<td><p>Specifies a 20-percent hatch. The ratio of foreground color to background color is 20:100.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Percent25</b></p></td>
+<td><p>Specifies a 25-percent hatch. The ratio of foreground color to background color is 25:100.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Percent30</b></p></td>
+<td><p>Specifies a 30-percent hatch. The ratio of foreground color to background color is 30:100.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Percent40</b></p></td>
+<td><p>Specifies a 40-percent hatch. The ratio of foreground color to background color is 40:100.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Percent50</b></p></td>
+<td><p>Specifies a 50-percent hatch. The ratio of foreground color to background color is 50:100.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Percent60</b></p></td>
+<td><p>Specifies a 60-percent hatch. The ratio of foreground color to background color is 60:100.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Percent70</b></p></td>
+<td><p>Specifies a 70-percent hatch. The ratio of foreground color to background color is 70:100.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Percent75</b></p></td>
+<td><p>Specifies a 75-percent hatch. The ratio of foreground color to background color is 75:100.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Percent80</b></p></td>
+<td><p>Specifies a 80-percent hatch. The ratio of foreground color to background color is 80:100.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Percent90</b></p></td>
+<td><p>Specifies a 90-percent hatch. The ratio of foreground color to background color is 90:100.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Plaid</b></p></td>
+<td><p>Specifies a hatch that has the appearance of a plaid material.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Shingle</b></p></td>
+<td><p>Specifies a hatch that has the appearance of diagonally layered shingles that slant to the right from top points to bottom points.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>SmallCheckerBoard</b></p></td>
+<td><p>Specifies a hatch that has the appearance of a checkerboard.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>SmallConfetti</b></p></td>
+<td><p>Specifies a hatch that has the appearance of confetti.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>SmallGrid</b></p></td>
+<td><p>Specifies horizontal and vertical lines that cross and are spaced 50 percent closer together than hatch style Cross.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>SolidDiamond</b></p></td>
+<td><p>Specifies a hatch that has the appearance of a checkerboard placed diagonally.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Sphere</b></p></td>
+<td><p>Specifies a hatch that has the appearance of spheres laid adjacent to one another.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Trellis</b></p></td>
+<td><p>Specifies a hatch that has the appearance of a trellis.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Vertical</b></p></td>
+<td><p>A pattern of vertical lines.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Wave</b></p></td>
+<td><p>Specifies horizontal lines that are composed of tildes.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>Weave</b></p></td>
+<td><p>Specifies a hatch that has the appearance of a woven material.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>WideDownwardDiagonal</b></p></td>
+<td><p>Specifies diagonal lines that slant to the right from top points to bottom points, have the same spacing as hatch style ForwardDiagonal, and are triple its width.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>WideUpwardDiagonal</b></p></td>
+<td><p>Specifies diagonal lines that slant to the left from top points to bottom points, have the same spacing as hatch style BackwardDiagonal, and are triple its width.</p></td>
+</tr>
+<tr>
+<td><img src='enumfield.png' title='Member' align='absmiddle' /></td>
+<td><p><b>ZigZag</b></p></td>
+<td><p>Specifies horizontal lines that are composed of zigzags.</p></td>
+</tr>
+</table>
+</div>
+<h2><span id='SeeAlso' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='SeeAlsoImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;See Also</span></h2><div id='SeeAlsoSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<p><a id='85335' href='N_com_mindfusion_drawing_0.htm' title=''>com.mindfusion.drawing Namespace</a></p>
+</div>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2022 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

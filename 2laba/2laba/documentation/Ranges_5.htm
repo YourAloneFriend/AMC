@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='25500' />
+<title>Ranges</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JChart">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Charting for Java Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Ranges</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p>The range is a visual representation of an interval within a gauge. Ranges are commonly used to mark or emphasize specific zones on the scale. Often the end of the scale is a danger zone and a range can be used to indicate this. The following image illustrates an oval gauge with three ranges (red, yellow and green) specifying different zones on the scale.</p><p><center><img src='GaugesRanges1.png' title='' hspace='0' vspace='0' width='210' height='124'/></center></p><p>The range interval is specified through the MinValue and MaxValue properties. The Alignment and Offset properties control the positioning and the <a id='79136' href='M_com_mindfusion_charting_components_gauges_Range_getStartWidth_0.htm' title=''>StartWidth</a> and <a id='79132' href='M_com_mindfusion_charting_components_gauges_Range_getEndWidth_0.htm' title=''>EndWidth</a> properties specify the size of the range. The range can be auto-sized to the scale by setting AutoSize to true. To learn more about the different alignment modes check the <a id='25498' href='Ticks_and_Labels_5.htm' title=''>Ticks and Labels</a> topic.</p><h2>Appearance</h2>The <a id='79320' href='M_com_mindfusion_charting_components_gauges_VisualElement_getFill_0.htm' title=''>Fill</a> and <a id='79323' href='M_com_mindfusion_charting_components_gauges_VisualElement_getStroke_0.htm' title=''>Stroke</a> properties can be used to specify the appearance of the range. The stroke on the different sides of the range can be turned off by using the CapStart, CapEnd, StrokeInside and StrokeOutside properties.<h2>Usage</h2><p>The sample code below illustrates how to define and add ranges to an existing linear scale:</p><p><table class='syntax' codeLanguage='Java' cellspacing='0'><tr><th><span style='float: left;'>Java</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>Range range1 = new Range();<br/>range1.setMinValue(70);<br/>range1.setMaxValue(80);<br/>range1.setStartWidth(new Length(0));<br/>range1.setEndWidth(new Length(5, LengthType.Relative));<br/>range1.setFill(new SolidBrush(Color.YELLOW));<br/>range1.setStroke(new Pen(Color.GRAY));<br/>range1.setAlignment(Alignment.OuterOutside);<br/>range1.setOffset(new Length(-2));<br/>range1.setCapEnd(false);</p><p>Range range2 = new Range();<br/>range2.setMinValue(80);<br/>range2.setMaxValue(90);<br/>range2.setStartWidth(new Length(5, LengthType.Relative));<br/>range2.setEndWidth(new Length(10, LengthType.Relative));<br/>range2.setFill(new SolidBrush(Color.ORANGE));<br/>range2.setStroke(new Pen(Color.DARK_GRAY));<br/>range2.setAlignment(Alignment.OuterOutside);<br/>range2.setOffset(new Length(-2));<br/>range2.setCapStart(false);<br/>range2.setCapEnd(false);</p><p>Range range3 = new Range();<br/>range3.setMinValue(90);<br/>range3.setMaxValue(100);<br/>range3.setStartWidth(new Length(10, LengthType.Relative));<br/>range3.setEndWidth(new Length(15, LengthType.Relative));<br/>range3.setFill(new SolidBrush(Color.RED));<br/>range3.setStroke(new Pen(Color.DARK_GRAY));<br/>range3.setAlignment(Alignment.OuterOutside);<br/>range3.setOffset(new Length(-2));<br/>range3.setCapStart(false);</p><p>LinearScale linearScale = new LinearScale();<br/>linearScale.getRanges().add(range1);<br/>linearScale.getRanges().add(range2);<br/>linearScale.getRanges().add(range3);<br/>&#160;&#160;<br/>LinearGauge g = new LinearGauge();<br/>g.getScales().add(linearScale);</p></td></tr></table></p><p>The linear gauge defined above will look like this:</p><p><img src='GaugesRanges2.png' title='' hspace='0' vspace='0' align='' width='497' height='115'/></p>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2022 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
